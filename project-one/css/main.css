@@ -1,0 +1,55 @@
+body {
+  font: verdana, sans-serif;
+  line-height: 2;
+  font-size: 16px;
+  font-weight: 300;
+  color: #666;
+}
+
+
+.product-container {
+  margin-left: 27px;
+}
+
+
+.header {
+  margin-top: 25px;
+}
+
+
+.main-title {
+  font-weight: 500;
+  font-size: 48px;
+}
+
+
+.sub-title {
+  color: #F71;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
+.intro-par {
+  margin-top: 30px;
+}
+
+
+.product-image {
+  max-height: 400px;
+  max-width: 400px;
+  padding-top: 23px;
+}
+
+
+.features-box {
+  border: solid 1px #CCC;
+  margin-top: 25px;
+  max-width: 375px;
+  padding: 10px 30px 30px 30px;
+}
+
+.features-list {
+  margin-top: 30px;
+}
+
