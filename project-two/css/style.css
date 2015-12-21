@@ -4,9 +4,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
-
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .online-education {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -15,7 +13,7 @@
 h1 {
 
   font-size: 40px;
-  color: #F5A623;
+  color: #00ced6;
   line-height: 48px;
   display: inline;
 }
@@ -54,7 +52,6 @@ h2, h3, h4, h5 {
   font-size: 14px;
   color: #999999;
   line-height: 16px;
-  float: left;
 }
 
 .location-text {
@@ -87,20 +84,21 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #00ced6;
   display: none;
 }
 
 #skills {
   display: none;
+  font-size: 14px;
 }
 
-.orange {
-  background-color: #F5AE23;
+.blue {
+  background-color: #00ced6;
 }
 
-.orange-text {
-  color: #F5AE23;
+.blue-text {
+  color: #00ced6;
 }
 
 .white-text {
@@ -123,6 +121,29 @@ a {
   background-color: #484848;
 }
 
+nav {
+  background-color: #696969;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+nav ul {
+  width: 100%;
+  text-align: center;
+}
+
+nav ul a {
+  color: #FFFFFF;
+  margin-top: 0px;
+  display: inline-block;
+  padding: 1%;
+  width: 23%;
+}
+
+nav ul a:hover {
+  color: #CFCFCF;
+}
+
 .flex-box {
   display: -webkit-flex;
   display: flex;
@@ -133,13 +154,18 @@ a {
 }
 
 .center-content {
-  padding: 5%;
+  padding: 2%;
 }
 
 ul {
   list-style-type: none;
 }
 
+.roles {
+  list-style-type: circle;
+  margin: 0.5% 0 0 2%;
+  font-size: 14px;
+}
 
 .biopic {
   float: left;
@@ -216,4 +242,9 @@ span {
   .biopic {
     display: block;
   }
+}
+
+.profile-image {
+  height: auto;
+  width: 150px;
 }
