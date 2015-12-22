@@ -1,127 +1,41 @@
-var bio = {
-  "name": "Angelina Fomina",
-  "role": "Co-founder of ParseHub",
-  "contacts": {
-      "email": "angelina.fomina@gmail.com",
-      "mobile": "647-207-2942",
-      "github": "aafomina",
-      "twitter": "@aafomina",
-      "location": "Toronto, Canada"
-  },
-  "bioPic": "images/angelina.jpg",
-  "welcomeMessage": "Having fun exploring the Udacity front-end dev course!",
-  "skills": [
-      "CSS",
-      "Sales",
-      "UI/UX",
-      "Growth Hacking"
-  ],
-  "menu": [
-    {
-      "link": "workExperience",
-      "name": "Work"
-    },
-    {
-      "link": "projects",
-      "name": "Projects"
-    },
-    {
-      "link": "education",
-      "name": "Education"
-    },
-    {
-      "link": "map",
-      "name": "Places Lived"
-    },
-  ]
-}
-
-var work = {
-  "jobs": [
-    {
-      "employer": "ParseHub",
-      "title": "Co-founder",
-      "location": "Toronto, Canada",
-      "dates": "2014 - Present",
-      "description": ["Co-founder of a data SaaS start-up.","lala"]
-    },
-    {
-      "employer": "OpenInvite",
-      "title": "Co-founder",
-      "location": "Toronto, Canada",
-      "dates": "2013 - 2014",
-      "description": ["Co-founder of an events app.","lala"]
-    },
-    {
-      "employer": "Digital Jungle",
-      "title": "Marketing Coordinator",
-      "location": "Bejing, China",
-      "dates": "2012",
-      "description": ["Worked in Beijing, China for 9 months","lala"]
-    },
-    {
-      "employer": "SunLife Financial",
-      "title": "Coportate Marketing and Communications",
-      "location": "Toronto, Canada",
-      "dates": "2011",
-      "description": ["Corporate public relations and marketing at insurance company.", "lala"]
-    }
-  ]
-}
-
-var projects = {
-  "projects": [
-    {
-      "title": "Cansbridge Fellowship",
-      "dates": "2013 - Present",
-      "description": "Established a not-for-profit program that sends University students on an internship to China.",
-      "images": ["images/cansbridge.png","images/cansbridge2.png"]
-    },
-    {
-      "title": "NextElective",
-      "dates": "2014",
-      "description": "Web development, UI/UX for online mentorship program that connects future students to current students.",
-      "images": ["images/nextelective.png"]
-    },
-    {
-      "title": "FreshSight Queen's",
-      "dates": "2012 - 2013",
-      "description": "Founding member of a pro-bono not-for-profit consulting group, completely run by students.",
-      "images": ["images/freshsight.png"]
-    }
-  ]
-}
-
-var education = {
-  "schools": [
-    {
-      "name": "Queen's University",
-      "location": "Kingston, Canada",
-      "degree": "Bachelor",
-      "major": "Commerce",
-      "dates": "2013",
-      "url": ""
-    },
-    {
-      "name": "University of Business and Economics",
-      "location": "Beijing, China",
-      "degree": "Exchange",
-      "major": "International Business",
-      "dates": "2012",
-      "url": ""
-    }
-  ],
-  "onlineCourses": [
-    {
-      "title": "Front-end Development Course",
-      "school": "Udacity",
-      "dates": "2015",
-      "url": "https://www.udacity.com"
-    }
-  ]
-}
-
 function displayBio() {
+  var bio = {
+    "name": "Angelina Fomina",
+    "role": "Co-founder of ParseHub",
+    "contacts": {
+        "email": "angelina.fomina@gmail.com",
+        "mobile": "647-207-2942",
+        "github": "aafomina",
+        "twitter": "@aafomina",
+        "location": "Toronto, Canada"
+    },
+    "bioPic": "images/angelina.jpg",
+    "welcomeMessage": "Having fun exploring the Udacity front-end dev course!",
+    "skills": [
+        "CSS",
+        "Sales",
+        "UI/UX",
+        "Growth Hacking"
+    ],
+    "menu": [
+      {
+        "link": "workExperience",
+        "name": "Work"
+      },
+      {
+        "link": "projects",
+        "name": "Projects"
+      },
+      {
+        "link": "education",
+        "name": "Education"
+      },
+      {
+        "link": "map",
+        "name": "Places Lived"
+      },
+    ]
+  }
   var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
   $("#topContacts").append(formattedMobile);
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -154,11 +68,52 @@ function displayBio() {
     var formattedNavItem = formattedNavLink + formattedNavName;
     $("#main-nav").append(formattedNavItem);
   };
+  var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+  $("#footerContacts").append(formattedMobile);
+  var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+  $("#footerContacts").append(formattedEmail);
+  var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+  $("#footerContacts").append(formattedTwitter);
+  var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
+  $("#footerContacts").append(formattedGitHub);
+  var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+  $("#footerContacts").append(formattedLocation);
 }
-
 displayBio();
 
 function displayWork() {
+  var work = {
+    "jobs": [
+      {
+        "employer": "ParseHub",
+        "title": "Co-founder",
+        "location": "Toronto, Canada",
+        "dates": "2014 - Present",
+        "description": ["Co-founder of a data SaaS start-up.","lala"]
+      },
+      {
+        "employer": "OpenInvite",
+        "title": "Co-founder",
+        "location": "Toronto, Canada",
+        "dates": "2013 - 2014",
+        "description": ["Co-founder of an events app.","lala"]
+      },
+      {
+        "employer": "Digital Jungle",
+        "title": "Marketing Coordinator",
+        "location": "Bejing, China",
+        "dates": "2012",
+        "description": ["Worked in Beijing, China for 9 months","lala"]
+      },
+      {
+        "employer": "SunLife Financial",
+        "title": "Coportate Marketing and Communications",
+        "location": "Toronto, Canada",
+        "dates": "2011",
+        "description": ["Corporate public relations and marketing at insurance company.", "lala"]
+      }
+    ]
+  }
   for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
     var formattedWorkTitle =  HTMLworkTitle.replace("%data%", work.jobs[job].title);
@@ -174,10 +129,31 @@ function displayWork() {
     }
   }
 }
-
 displayWork();
 
-function displayProjects() {
+projects.display = function() {
+  var projects = {
+    "projects": [
+      {
+        "title": "Cansbridge Fellowship",
+        "dates": "2013 - Present",
+        "description": "Established a not-for-profit program that sends University students on an internship to China.",
+        "images": ["images/cansbridge.png","images/cansbridge2.png"]
+      },
+      {
+        "title": "NextElective",
+        "dates": "2014",
+        "description": "Web development, UI/UX for online mentorship program that connects future students to current students.",
+        "images": ["images/nextelective.png"]
+      },
+      {
+        "title": "FreshSight Queen's",
+        "dates": "2012 - 2013",
+        "description": "Founding member of a pro-bono not-for-profit consulting group, completely run by students.",
+        "images": ["images/freshsight.png"]
+      }
+    ]
+  }
   for (project in projects.projects) {
     $("#projects").append(HTMLprojectStart);
     var formattedProjectTitle =  HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -193,10 +169,37 @@ function displayProjects() {
     }
   }
 }
+projects.display();
 
-displayProjects();
-
-function displayEducation() {
+education.display = function() {
+  var education = {
+    "schools": [
+      {
+        "name": "Queen's University",
+        "location": "Kingston, Canada",
+        "degree": "Bachelor",
+        "major": "Commerce",
+        "dates": "2013",
+        "url": ""
+      },
+      {
+        "name": "University of Business and Economics",
+        "location": "Beijing, China",
+        "degree": "Exchange",
+        "major": "International Business",
+        "dates": "2012",
+        "url": ""
+      }
+    ],
+    "onlineCourses": [
+      {
+        "title": "Front-end Development Course",
+        "school": "Udacity",
+        "dates": "2015",
+        "url": "https://www.udacity.com"
+      }
+    ]
+  }
   for (school in education.schools) {
     $("#education").append(HTMLschoolStart);
     var formattedSchoolName =  HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -217,23 +220,7 @@ function displayEducation() {
     $(".online-education").append(formattedOnlineCourses);
   }
 }
-
-displayEducation();
-
-function displayFooter() {
-  var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-  $("#footerContacts").append(formattedMobile);
-  var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-  $("#footerContacts").append(formattedEmail);
-  var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-  $("#footerContacts").append(formattedTwitter);
-  var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
-  $("#footerContacts").append(formattedGitHub);
-  var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-  $("#footerContacts").append(formattedLocation);
-}
-
-displayFooter();
+education.display();
 
 /*
 $(document).click(function(loc) {
